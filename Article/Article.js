@@ -136,6 +136,11 @@ function createArticle(title, date, fP, sP, tP){
   articleExpand.addEventListener('click', () => {
     article.classList.toggle('article-open');
     article.style.transition = 'height 2.5s';
+    if(article.classList.contains('article-open')){
+      articleExpand.style.transform = "scale(1, -1)";
+    }else{
+      articleExpand.style.transform = "scale(-1, 1)";  
+    }
   });
 
   articleClose.addEventListener('click', () => {
